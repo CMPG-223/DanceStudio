@@ -52,6 +52,12 @@
     <Compile Include="frmDancers.Designer.cs">
       <DependentUpon>frmDancers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEnrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnrol.Designer.cs">
+      <DependentUpon>frmEnrol.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExperienceLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDancers.resx">
       <DependentUpon>frmDancers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnrol.resx">
+      <DependentUpon>frmEnrol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExperienceLevel.resx">
       <DependentUpon>frmExperienceLevel.cs</DependentUpon>
