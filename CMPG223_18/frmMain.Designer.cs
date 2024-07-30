@@ -58,7 +58,7 @@ namespace CMPG223_18
             // btnDancers
             // 
             this.btnDancers.BackColor = System.Drawing.Color.OldLace;
-            this.btnDancers.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDancers.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDancers.Location = new System.Drawing.Point(147, 389);
             this.btnDancers.Name = "btnDancers";
             this.btnDancers.Size = new System.Drawing.Size(206, 49);
@@ -69,7 +69,7 @@ namespace CMPG223_18
             // btnEnrol
             // 
             this.btnEnrol.BackColor = System.Drawing.Color.OldLace;
-            this.btnEnrol.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnrol.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnrol.Location = new System.Drawing.Point(147, 460);
             this.btnEnrol.Name = "btnEnrol";
             this.btnEnrol.Size = new System.Drawing.Size(206, 49);
@@ -80,7 +80,7 @@ namespace CMPG223_18
             // btnClasses
             // 
             this.btnClasses.BackColor = System.Drawing.Color.OldLace;
-            this.btnClasses.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClasses.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClasses.Location = new System.Drawing.Point(357, 389);
             this.btnClasses.Name = "btnClasses";
             this.btnClasses.Size = new System.Drawing.Size(206, 49);
@@ -91,7 +91,7 @@ namespace CMPG223_18
             // btnPayments
             // 
             this.btnPayments.BackColor = System.Drawing.Color.OldLace;
-            this.btnPayments.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayments.Location = new System.Drawing.Point(357, 460);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(206, 49);
@@ -102,7 +102,7 @@ namespace CMPG223_18
             // btnTeachers
             // 
             this.btnTeachers.BackColor = System.Drawing.Color.OldLace;
-            this.btnTeachers.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeachers.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachers.Location = new System.Drawing.Point(568, 389);
             this.btnTeachers.Name = "btnTeachers";
             this.btnTeachers.Size = new System.Drawing.Size(206, 49);
@@ -113,7 +113,7 @@ namespace CMPG223_18
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.OldLace;
-            this.btnReports.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.Location = new System.Drawing.Point(568, 460);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(206, 49);
@@ -147,7 +147,7 @@ namespace CMPG223_18
             this.Controls.Add(this.btnDancers);
             this.Controls.Add(this.pcbLogo);
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "Main";
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
 
