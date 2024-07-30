@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDancers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDancers.Designer.cs">
+      <DependentUpon>frmDancers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExperienceLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDancers.resx">
+      <DependentUpon>frmDancers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmExperienceLevel.resx">
       <DependentUpon>frmExperienceLevel.cs</DependentUpon>
     </EmbeddedResource>
