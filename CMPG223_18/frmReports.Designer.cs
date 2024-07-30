@@ -185,7 +185,7 @@ namespace CMPG223_18
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnBack);
             this.Name = "frmReports";
-            this.Text = "frmReports";
+            this.Text = "Reports";
             this.gpbReports.ResumeLayout(false);
             this.gpbReports.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).EndInit();
