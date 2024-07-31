@@ -52,6 +52,7 @@ namespace CMPG223_18
             this.rdbAdd = new System.Windows.Forms.RadioButton();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnComplete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasses)).BeginInit();
             this.gpbClasses.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,7 @@ namespace CMPG223_18
             // lblTeacher
             // 
             this.lblTeacher.AutoSize = true;
-            this.lblTeacher.Location = new System.Drawing.Point(630, 366);
+            this.lblTeacher.Location = new System.Drawing.Point(630, 352);
             this.lblTeacher.Name = "lblTeacher";
             this.lblTeacher.Size = new System.Drawing.Size(67, 20);
             this.lblTeacher.TabIndex = 31;
@@ -68,7 +69,7 @@ namespace CMPG223_18
             // lblExpLvl
             // 
             this.lblExpLvl.AutoSize = true;
-            this.lblExpLvl.Location = new System.Drawing.Point(348, 366);
+            this.lblExpLvl.Location = new System.Drawing.Point(348, 352);
             this.lblExpLvl.Name = "lblExpLvl";
             this.lblExpLvl.Size = new System.Drawing.Size(129, 20);
             this.lblExpLvl.TabIndex = 30;
@@ -76,7 +77,7 @@ namespace CMPG223_18
             // 
             // txtClassPrice
             // 
-            this.txtClassPrice.Location = new System.Drawing.Point(630, 459);
+            this.txtClassPrice.Location = new System.Drawing.Point(630, 445);
             this.txtClassPrice.Name = "txtClassPrice";
             this.txtClassPrice.Size = new System.Drawing.Size(199, 26);
             this.txtClassPrice.TabIndex = 29;
@@ -84,7 +85,7 @@ namespace CMPG223_18
             // lblClassPrice
             // 
             this.lblClassPrice.AutoSize = true;
-            this.lblClassPrice.Location = new System.Drawing.Point(626, 436);
+            this.lblClassPrice.Location = new System.Drawing.Point(626, 422);
             this.lblClassPrice.Name = "lblClassPrice";
             this.lblClassPrice.Size = new System.Drawing.Size(87, 20);
             this.lblClassPrice.TabIndex = 28;
@@ -93,7 +94,7 @@ namespace CMPG223_18
             // lblDateOfClass
             // 
             this.lblDateOfClass.AutoSize = true;
-            this.lblDateOfClass.Location = new System.Drawing.Point(352, 436);
+            this.lblDateOfClass.Location = new System.Drawing.Point(352, 422);
             this.lblDateOfClass.Name = "lblDateOfClass";
             this.lblDateOfClass.Size = new System.Drawing.Size(105, 20);
             this.lblDateOfClass.TabIndex = 27;
@@ -101,7 +102,7 @@ namespace CMPG223_18
             // 
             // dtpClassDate
             // 
-            this.dtpClassDate.Location = new System.Drawing.Point(352, 460);
+            this.dtpClassDate.Location = new System.Drawing.Point(352, 446);
             this.dtpClassDate.Name = "dtpClassDate";
             this.dtpClassDate.Size = new System.Drawing.Size(191, 26);
             this.dtpClassDate.TabIndex = 26;
@@ -109,7 +110,7 @@ namespace CMPG223_18
             // lblEndTime
             // 
             this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(72, 507);
+            this.lblEndTime.Location = new System.Drawing.Point(72, 493);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(76, 20);
             this.lblEndTime.TabIndex = 25;
@@ -118,7 +119,7 @@ namespace CMPG223_18
             // lblStartTime
             // 
             this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(72, 474);
+            this.lblStartTime.Location = new System.Drawing.Point(72, 460);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(82, 20);
             this.lblStartTime.TabIndex = 24;
@@ -127,7 +128,7 @@ namespace CMPG223_18
             // lblDuration
             // 
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(72, 436);
+            this.lblDuration.Location = new System.Drawing.Point(72, 422);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(113, 20);
             this.lblDuration.TabIndex = 23;
@@ -136,7 +137,7 @@ namespace CMPG223_18
             // dtpEnd
             // 
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpEnd.Location = new System.Drawing.Point(160, 501);
+            this.dtpEnd.Location = new System.Drawing.Point(160, 487);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(149, 26);
             this.dtpEnd.TabIndex = 22;
@@ -144,7 +145,7 @@ namespace CMPG223_18
             // dtpStart
             // 
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpStart.Location = new System.Drawing.Point(160, 469);
+            this.dtpStart.Location = new System.Drawing.Point(160, 455);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(149, 26);
             this.dtpStart.TabIndex = 21;
@@ -152,7 +153,7 @@ namespace CMPG223_18
             // lblDanceType
             // 
             this.lblDanceType.AutoSize = true;
-            this.lblDanceType.Location = new System.Drawing.Point(72, 366);
+            this.lblDanceType.Location = new System.Drawing.Point(72, 352);
             this.lblDanceType.Name = "lblDanceType";
             this.lblDanceType.Size = new System.Drawing.Size(94, 20);
             this.lblDanceType.TabIndex = 19;
@@ -161,7 +162,7 @@ namespace CMPG223_18
             // cmbDanceType
             // 
             this.cmbDanceType.FormattingEnabled = true;
-            this.cmbDanceType.Location = new System.Drawing.Point(76, 390);
+            this.cmbDanceType.Location = new System.Drawing.Point(76, 376);
             this.cmbDanceType.Name = "cmbDanceType";
             this.cmbDanceType.Size = new System.Drawing.Size(199, 28);
             this.cmbDanceType.TabIndex = 32;
@@ -169,7 +170,7 @@ namespace CMPG223_18
             // cmbExpLvl
             // 
             this.cmbExpLvl.FormattingEnabled = true;
-            this.cmbExpLvl.Location = new System.Drawing.Point(352, 390);
+            this.cmbExpLvl.Location = new System.Drawing.Point(352, 376);
             this.cmbExpLvl.Name = "cmbExpLvl";
             this.cmbExpLvl.Size = new System.Drawing.Size(199, 28);
             this.cmbExpLvl.TabIndex = 33;
@@ -177,7 +178,7 @@ namespace CMPG223_18
             // cmbTeacher
             // 
             this.cmbTeacher.FormattingEnabled = true;
-            this.cmbTeacher.Location = new System.Drawing.Point(630, 389);
+            this.cmbTeacher.Location = new System.Drawing.Point(630, 375);
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.Size = new System.Drawing.Size(199, 28);
             this.cmbTeacher.TabIndex = 34;
@@ -261,12 +262,24 @@ namespace CMPG223_18
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             // 
+            // btnComplete
+            // 
+            this.btnComplete.BackColor = System.Drawing.Color.OldLace;
+            this.btnComplete.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComplete.Location = new System.Drawing.Point(69, 550);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(206, 49);
+            this.btnComplete.TabIndex = 41;
+            this.btnComplete.Text = "Complete";
+            this.btnComplete.UseVisualStyleBackColor = false;
+            // 
             // frmClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1011, 621);
+            this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.gpbClasses);
@@ -320,5 +333,6 @@ namespace CMPG223_18
         private System.Windows.Forms.RadioButton rdbAdd;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnComplete;
     }
 }
