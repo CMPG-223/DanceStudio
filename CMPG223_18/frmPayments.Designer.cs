@@ -51,9 +51,10 @@ namespace CMPG223_18
             this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Location = new System.Drawing.Point(8, 8);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(36, 36);
+            this.btnBack.Size = new System.Drawing.Size(24, 23);
             this.btnBack.TabIndex = 6;
             this.btnBack.UseVisualStyleBackColor = true;
             // 
@@ -61,9 +62,10 @@ namespace CMPG223_18
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.OldLace;
             this.btnLogOut.Font = new System.Drawing.Font("Modern No. 20", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(684, 582);
+            this.btnLogOut.Location = new System.Drawing.Point(456, 378);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(84, 31);
+            this.btnLogOut.Size = new System.Drawing.Size(56, 20);
             this.btnLogOut.TabIndex = 11;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -72,74 +74,83 @@ namespace CMPG223_18
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(319, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(213, 52);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(364, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(243, 312);
             this.dataGridView1.TabIndex = 12;
             // 
             // txtPay
             // 
-            this.txtPay.Location = new System.Drawing.Point(58, 342);
+            this.txtPay.Location = new System.Drawing.Point(39, 222);
+            this.txtPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPay.Name = "txtPay";
-            this.txtPay.Size = new System.Drawing.Size(200, 26);
+            this.txtPay.Size = new System.Drawing.Size(135, 20);
             this.txtPay.TabIndex = 22;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(54, 80);
+            this.lblName.Location = new System.Drawing.Point(36, 52);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(107, 20);
+            this.lblName.Size = new System.Drawing.Size(73, 13);
             this.lblName.TabIndex = 14;
             this.lblName.Text = "Dancer Name";
             // 
             // txtDancer
             // 
-            this.txtDancer.Location = new System.Drawing.Point(58, 103);
+            this.txtDancer.Location = new System.Drawing.Point(39, 67);
+            this.txtDancer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDancer.Name = "txtDancer";
-            this.txtDancer.Size = new System.Drawing.Size(200, 26);
+            this.txtDancer.Size = new System.Drawing.Size(135, 20);
             this.txtDancer.TabIndex = 15;
             // 
             // dtpDatePaid
             // 
-            this.dtpDatePaid.Location = new System.Drawing.Point(58, 178);
+            this.dtpDatePaid.Location = new System.Drawing.Point(39, 116);
+            this.dtpDatePaid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDatePaid.Name = "dtpDatePaid";
-            this.dtpDatePaid.Size = new System.Drawing.Size(200, 26);
+            this.dtpDatePaid.Size = new System.Drawing.Size(135, 20);
             this.dtpDatePaid.TabIndex = 16;
             // 
             // lblDatePaid
             // 
             this.lblDatePaid.AutoSize = true;
-            this.lblDatePaid.Location = new System.Drawing.Point(54, 155);
+            this.lblDatePaid.Location = new System.Drawing.Point(36, 101);
+            this.lblDatePaid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatePaid.Name = "lblDatePaid";
-            this.lblDatePaid.Size = new System.Drawing.Size(79, 20);
+            this.lblDatePaid.Size = new System.Drawing.Size(54, 13);
             this.lblDatePaid.TabIndex = 17;
             this.lblDatePaid.Text = "Date Paid";
             // 
             // lblPayNow
             // 
             this.lblPayNow.AutoSize = true;
-            this.lblPayNow.Location = new System.Drawing.Point(54, 319);
+            this.lblPayNow.Location = new System.Drawing.Point(36, 207);
+            this.lblPayNow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPayNow.Name = "lblPayNow";
-            this.lblPayNow.Size = new System.Drawing.Size(70, 20);
+            this.lblPayNow.Size = new System.Drawing.Size(50, 13);
             this.lblPayNow.TabIndex = 19;
             this.lblPayNow.Text = "Pay Now";
             // 
             // txtPayable
             // 
-            this.txtPayable.Location = new System.Drawing.Point(58, 263);
+            this.txtPayable.Location = new System.Drawing.Point(39, 171);
+            this.txtPayable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPayable.Name = "txtPayable";
-            this.txtPayable.Size = new System.Drawing.Size(200, 26);
+            this.txtPayable.Size = new System.Drawing.Size(135, 20);
             this.txtPayable.TabIndex = 20;
             // 
             // lblPayable
             // 
             this.lblPayable.AutoSize = true;
-            this.lblPayable.Location = new System.Drawing.Point(54, 240);
+            this.lblPayable.Location = new System.Drawing.Point(36, 156);
+            this.lblPayable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPayable.Name = "lblPayable";
-            this.lblPayable.Size = new System.Drawing.Size(164, 20);
+            this.lblPayable.Size = new System.Drawing.Size(111, 13);
             this.lblPayable.TabIndex = 21;
             this.lblPayable.Text = "Total Payable Amount";
             // 
@@ -147,9 +158,10 @@ namespace CMPG223_18
             // 
             this.btnAdd.BackColor = System.Drawing.Color.OldLace;
             this.btnAdd.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(58, 511);
+            this.btnAdd.Location = new System.Drawing.Point(39, 332);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(206, 49);
+            this.btnAdd.Size = new System.Drawing.Size(137, 32);
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -158,19 +170,20 @@ namespace CMPG223_18
             // 
             this.btnDelete.BackColor = System.Drawing.Color.OldLace;
             this.btnDelete.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(58, 443);
+            this.btnDelete.Location = new System.Drawing.Point(39, 288);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(206, 49);
+            this.btnDelete.Size = new System.Drawing.Size(137, 32);
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // frmPayments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(780, 625);
+            this.ClientSize = new System.Drawing.Size(520, 406);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPay);
@@ -184,8 +197,10 @@ namespace CMPG223_18
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnBack);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmPayments";
             this.Text = "Payments";
+            this.Load += new System.EventHandler(this.frmPayments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

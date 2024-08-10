@@ -16,5 +16,10 @@ namespace CMPG223_18
         {
             InitializeComponent();
         }
+
+        private void frmPayments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
