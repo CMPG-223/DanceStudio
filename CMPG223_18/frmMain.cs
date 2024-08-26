@@ -16,5 +16,41 @@ namespace CMPG223_18
         {
             InitializeComponent();
         }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            frmPayments Paymentsfrm = new frmPayments();
+            Paymentsfrm.Show();
+            this.Hide();
+        }
+
+        private void btnDancers_Click(object sender, EventArgs e)
+        {
+            frmDancers DancerFrm = new frmDancers();
+            DancerFrm.Show();
+            this.Hide();
+        }
+
+        private void btnClasses_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTeachers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            frmReports ReportsFrm = new frmReports();
+            ReportsFrm.Show();
+            this.Hide();
+        }
+
+        private void btnEnrol_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

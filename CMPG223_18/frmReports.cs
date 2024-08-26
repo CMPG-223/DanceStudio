@@ -13,6 +13,13 @@ namespace CMPG223_18
 {
     public partial class frmReports : Form
     {
+        //connection
+        public String connectString = "Data Source=laptop-e2jafdm7\\sqlexpress;Initial Catalog=DanceStudio;Integrated Security=True";
+        //other public var
+        public SqlConnection con = new SqlConnection();
+        public SqlCommand command;
+        public DataSet ds = new DataSet();
+        public SqlDataAdapter adapter;
         public frmReports()
         {
             InitializeComponent();
@@ -20,7 +27,204 @@ namespace CMPG223_18
 
         private void frmReports_Load(object sender, EventArgs e)
         {
+            rdbTop3Dance.Checked = true;
+            rdbTop3Dance_CheckedChanged(sender, e);
+        }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmMain Mainfrm = new frmMain();
+            Mainfrm.Show();
+        }
+
+        private void rdbTop3Dance_CheckedChanged(object sender, EventArgs e)
+        {
+            DateTime startDate = dtpStartDate.Value;
+            DateTime endDate = dtpEndDate.Value;
+
+            if (rdbTop3Dance.Checked)
+            {
+                //Disable sorting because not neccesary
+                cmbSortBy.Enabled = false;
+
+                //Display top 3 dance types
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectString))
+                    {
+                        con.Open();
+
+                        string showTop3 = @"SELECT TOP 3 COUNT(c.Dance_Type_ID) AS [Number of dance types], dt.Type_Desc FROM Dance_Type dt " +
+                                             "JOIN [Class] c ON dt.Dance_Type_ID = c.Dance_Type_ID WHERE c.Class_DateTime BETWEEN @startDate AND @endDate" +
+                                             " GROUP BY dt.Type_Desc ORDER BY COUNT(c.Dance_Type_ID) DESC";
+
+                        using (SqlCommand command = new SqlCommand(showTop3, con))
+                        {
+                            command.Parameters.AddWithValue("@startDate", startDate);
+                            command.Parameters.AddWithValue("@endDate", endDate);
+
+                            SqlDataAdapter adapter = new SqlDataAdapter(command);
+                            ds.Clear();
+                            adapter.Fill(ds, "Dance_Type");
+
+                            con.Close();
+
+                            dgvReports.DataSource = ds.Tables["Dance_Type"].DefaultView;
+                        }
+                    }
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else if (rdbOutPay.Checked)
+            {
+                //Enable sorting
+                cmbSortBy.Enabled = true;
+
+                //Display outstanding payments
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectString))
+                    {
+                        con.Open();
+
+                        string showReport = @"SELECT Dancer_FName, Dancer_LName, Dancer_Total_All_Classes, Total_Received,  " +
+                                                "Dancer_Total_All_Classes - Total_Received AS [Outstanding] FROM Dancer " +
+                                             "WHERE Dancer_Total_All_Classes - Total_Received > 0 " ;
+                        SqlDataAdapter adapter = new SqlDataAdapter(showReport, con);
+                        ds.Clear();
+                        adapter.Fill(ds, "Dancer");
+
+                        con.Close();
+
+                        dgvReports.DataSource = ds.Tables["Dancer"].DefaultView;
+                    }
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSortBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSortBy.SelectedIndex == 0)
+            {
+                //alphabetical a-z
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectString))
+                    {
+                        con.Open();
+
+                        string showReport = @"SELECT Dancer_FName, Dancer_LName, Dancer_Total_All_Classes, Total_Received,  " +
+                                                "Dancer_Total_All_Classes - Total_Received AS [Outstanding] FROM Dancer " +
+                                             "WHERE Dancer_Total_All_Classes - Total_Received > 0 " + 
+                                             "ORDER BY Dancer_LName ASC, Dancer_FName ASC";
+                        SqlDataAdapter adapter = new SqlDataAdapter(showReport, con);
+                        ds.Clear();
+                        adapter.Fill(ds, "Dancer");
+
+                        con.Close();
+
+                        dgvReports.DataSource = ds.Tables["Dancer"].DefaultView;
+                    }
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else if (cmbSortBy.SelectedIndex == 1)
+            {
+                //alphabetical z-a
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectString))
+                    {
+                        con.Open();
+
+                        string showReport = @"SELECT Dancer_FName, Dancer_LName, Dancer_Total_All_Classes, Total_Received,  " +
+                                                "Dancer_Total_All_Classes - Total_Received AS [Outstanding] FROM Dancer " +
+                                             "WHERE Dancer_Total_All_Classes - Total_Received > 0 " +
+                                             "ORDER BY Dancer_LName DESC, Dancer_FName DESC";
+                        SqlDataAdapter adapter = new SqlDataAdapter(showReport, con);
+                        ds.Clear();
+                        adapter.Fill(ds, "Dancer");
+
+                        con.Close();
+
+                        dgvReports.DataSource = ds.Tables["Dancer"].DefaultView;
+                    }
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else if (cmbSortBy.SelectedIndex == 2)
+            {
+                //outstanding most - least
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectString))
+                    {
+                        con.Open();
+
+                        string showReport = @"SELECT Dancer_FName, Dancer_LName, Dancer_Total_All_Classes, Total_Received,  " +
+                                                "Dancer_Total_All_Classes - Total_Received AS [Outstanding] FROM Dancer " +
+                                             "WHERE Dancer_Total_All_Classes - Total_Received > 0 " +
+                                             "ORDER BY Dancer_Total_All_Classes - Total_Received DESC";
+                        SqlDataAdapter adapter = new SqlDataAdapter(showReport, con);
+                        ds.Clear();
+                        adapter.Fill(ds, "Dancer");
+
+                        con.Close();
+
+                        dgvReports.DataSource = ds.Tables["Dancer"].DefaultView;
+                    }
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else if (cmbSortBy.SelectedIndex == 3)
+            {
+                //outstanding least - most
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectString))
+                    {
+                        con.Open();
+
+                        string showReport = @"SELECT Dancer_FName, Dancer_LName, Dancer_Total_All_Classes, Total_Received,  " +
+                                                "Dancer_Total_All_Classes - Total_Received AS [Outstanding] FROM Dancer " +
+                                             "WHERE Dancer_Total_All_Classes - Total_Received > 0 " +
+                                             "ORDER BY Dancer_Total_All_Classes - Total_Received ASC";
+                        SqlDataAdapter adapter = new SqlDataAdapter(showReport, con);
+                        ds.Clear();
+                        adapter.Fill(ds, "Dancer");
+
+                        con.Close();
+
+                        dgvReports.DataSource = ds.Tables["Dancer"].DefaultView;
+                    }
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
         }
     }
 }

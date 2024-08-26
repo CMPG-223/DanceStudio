@@ -16,5 +16,12 @@ namespace CMPG223_18
         {
             InitializeComponent();
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            frmMain Mainfrm = new frmMain();
+            this.Hide();
+            Mainfrm.ShowDialog();
+        }
     }
 }

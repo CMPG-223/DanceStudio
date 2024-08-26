@@ -42,6 +42,7 @@ namespace CMPG223_18
             this.cmbSortBy = new System.Windows.Forms.ComboBox();
             this.lblSort = new System.Windows.Forms.Label();
             this.dgvReports = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.gpbReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
             this.SuspendLayout();
@@ -52,18 +53,19 @@ namespace CMPG223_18
             this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Location = new System.Drawing.Point(8, 8);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(24, 23);
             this.btnBack.TabIndex = 7;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.OldLace;
             this.btnLogOut.Font = new System.Drawing.Font("Modern No. 20", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(551, 369);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Location = new System.Drawing.Point(717, 375);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(56, 20);
             this.btnLogOut.TabIndex = 12;
@@ -72,8 +74,8 @@ namespace CMPG223_18
             // 
             // dtpEndDate
             // 
-            this.dtpEndDate.Location = new System.Drawing.Point(43, 289);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpEndDate.Location = new System.Drawing.Point(82, 306);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(135, 20);
             this.dtpEndDate.TabIndex = 20;
@@ -81,7 +83,7 @@ namespace CMPG223_18
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(43, 274);
+            this.lblEndDate.Location = new System.Drawing.Point(82, 291);
             this.lblEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(52, 13);
@@ -90,11 +92,12 @@ namespace CMPG223_18
             // 
             // dtpStartDate
             // 
-            this.dtpStartDate.Location = new System.Drawing.Point(43, 229);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStartDate.Location = new System.Drawing.Point(82, 246);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(135, 20);
             this.dtpStartDate.TabIndex = 18;
+            this.dtpStartDate.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             // 
             // gpbReports
             // 
@@ -102,42 +105,44 @@ namespace CMPG223_18
             this.gpbReports.Controls.Add(this.rdbOutPay);
             this.gpbReports.Controls.Add(this.rdbTop3Dance);
             this.gpbReports.Location = new System.Drawing.Point(44, 51);
-            this.gpbReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbReports.Margin = new System.Windows.Forms.Padding(2);
             this.gpbReports.Name = "gpbReports";
-            this.gpbReports.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gpbReports.Size = new System.Drawing.Size(141, 96);
+            this.gpbReports.Padding = new System.Windows.Forms.Padding(2);
+            this.gpbReports.Size = new System.Drawing.Size(227, 105);
             this.gpbReports.TabIndex = 17;
             this.gpbReports.TabStop = false;
-            this.gpbReports.Text = "Reports";
+            this.gpbReports.Text = "Please choose what report you want to see";
             // 
             // rdbOutPay
             // 
             this.rdbOutPay.AutoSize = true;
             this.rdbOutPay.Location = new System.Drawing.Point(5, 58);
-            this.rdbOutPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbOutPay.Margin = new System.Windows.Forms.Padding(2);
             this.rdbOutPay.Name = "rdbOutPay";
             this.rdbOutPay.Size = new System.Drawing.Size(130, 17);
             this.rdbOutPay.TabIndex = 1;
             this.rdbOutPay.TabStop = true;
             this.rdbOutPay.Text = "Outstanding payments";
             this.rdbOutPay.UseVisualStyleBackColor = true;
+            this.rdbOutPay.CheckedChanged += new System.EventHandler(this.rdbTop3Dance_CheckedChanged);
             // 
             // rdbTop3Dance
             // 
             this.rdbTop3Dance.AutoSize = true;
             this.rdbTop3Dance.Location = new System.Drawing.Point(5, 27);
-            this.rdbTop3Dance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbTop3Dance.Margin = new System.Windows.Forms.Padding(2);
             this.rdbTop3Dance.Name = "rdbTop3Dance";
             this.rdbTop3Dance.Size = new System.Drawing.Size(93, 17);
             this.rdbTop3Dance.TabIndex = 0;
             this.rdbTop3Dance.TabStop = true;
             this.rdbTop3Dance.Text = "Top 3 Dances";
             this.rdbTop3Dance.UseVisualStyleBackColor = true;
+            this.rdbTop3Dance.CheckedChanged += new System.EventHandler(this.rdbTop3Dance_CheckedChanged);
             // 
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(43, 214);
+            this.lblStartDate.Location = new System.Drawing.Point(82, 231);
             this.lblStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(55, 13);
@@ -149,19 +154,20 @@ namespace CMPG223_18
             this.cmbSortBy.FormattingEnabled = true;
             this.cmbSortBy.Items.AddRange(new object[] {
             "Alphabetical (A-Z)",
-            "(Z-A)",
-            "Age (oldest to youngest)",
-            "Age"});
-            this.cmbSortBy.Location = new System.Drawing.Point(43, 173);
-            this.cmbSortBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Alphabetical (Z-A)",
+            "Most outstaning",
+            "Least outstanding"});
+            this.cmbSortBy.Location = new System.Drawing.Point(82, 190);
+            this.cmbSortBy.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSortBy.Name = "cmbSortBy";
             this.cmbSortBy.Size = new System.Drawing.Size(135, 21);
             this.cmbSortBy.TabIndex = 15;
+            this.cmbSortBy.SelectedIndexChanged += new System.EventHandler(this.cmbSortBy_SelectedIndexChanged);
             // 
             // lblSort
             // 
             this.lblSort.AutoSize = true;
-            this.lblSort.Location = new System.Drawing.Point(41, 158);
+            this.lblSort.Location = new System.Drawing.Point(80, 175);
             this.lblSort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSort.Name = "lblSort";
             this.lblSort.Size = new System.Drawing.Size(41, 13);
@@ -173,20 +179,33 @@ namespace CMPG223_18
             this.dgvReports.AllowUserToOrderColumns = true;
             this.dgvReports.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReports.Location = new System.Drawing.Point(247, 51);
-            this.dgvReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReports.Location = new System.Drawing.Point(371, 51);
+            this.dgvReports.Margin = new System.Windows.Forms.Padding(2);
             this.dgvReports.Name = "dgvReports";
             this.dgvReports.RowHeadersWidth = 62;
             this.dgvReports.RowTemplate.Height = 28;
             this.dgvReports.Size = new System.Drawing.Size(281, 313);
             this.dgvReports.TabIndex = 13;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(323, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 31);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Reports";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(615, 396);
+            this.ClientSize = new System.Drawing.Size(806, 429);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.dtpStartDate);
@@ -197,7 +216,7 @@ namespace CMPG223_18
             this.Controls.Add(this.dgvReports);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnBack);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.frmReports_Load);
@@ -223,5 +242,6 @@ namespace CMPG223_18
         private System.Windows.Forms.ComboBox cmbSortBy;
         private System.Windows.Forms.Label lblSort;
         private System.Windows.Forms.DataGridView dgvReports;
+        private System.Windows.Forms.Label label1;
     }
 }
