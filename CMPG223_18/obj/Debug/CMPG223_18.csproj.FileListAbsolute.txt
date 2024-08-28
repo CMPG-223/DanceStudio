@@ -1,0 +1,29 @@
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\bin\Debug\CMPG223_18.exe.config
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\bin\Debug\CMPG223_18.exe
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\bin\Debug\CMPG223_18.pdb
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.exe
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.pdb
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\bin\Debug\CMPG223_18.exe.config
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\bin\Debug\CMPG223_18.exe
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\bin\Debug\CMPG223_18.pdb
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.exe
+C:\Users\naled\OneDrive\Desktop\BSc IT\CMPG 223\Project\Coding\CMPG223_18\obj\Debug\CMPG223_18.pdb
