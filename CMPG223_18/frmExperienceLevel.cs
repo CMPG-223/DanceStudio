@@ -28,121 +28,121 @@ namespace CMPG223_18
 
         private void frmExperienceLevel_Load(object sender, EventArgs e)
         {
+
             //use try catch for everything
-            try
-            {
-                conn = new SqlConnection(conString);
-                conn.Open();
-                //MessageBox.Show("Connection to Shufflez Studio Database successful.");
-                PopulateExperienceLevel();
-                PopulateDanceType();
-                PopulateClasses();
-                ViewAllData();
-                conn.Close();
-            }
-            catch(SqlException error)
-            {
-                MessageBox.Show(error.Message);
-            }
-
-            //1.) use if statement to show the stuff according to the selected radio button ACTIO BUTTON NEEDED
-
-            //2.) show classes in the listbox
+            conn = new SqlConnection(conString);
+            conn.Open();
+            //MessageBox.Show("Connection to Shufflez Studio Database successful.");
+            PopulateExperienceLevel();
+            PopulateDanceType();
+            PopulateClasses();
+            ViewAllData();
+            conn.Close();           
         }
-
-        private void clearSelection()
-        {
-            if (rdbAdd.Checked)
-            {
-                txtAddExpLvl.Enabled = true;
-                btnAddExpLvl.Enabled = true;
-            }
-            else if (rdbDelete.Checked)
-            {
-                txtAddExpLvl.Enabled = false;
-                btnAddExpLvl.Enabled = false;
-                btnAddExpLvl.Text = "";
-            }
-            else if (rdbUpdate.Checked)
-            {
-                txtAddExpLvl.Enabled = false;
-                btnAddExpLvl.Enabled = false;
-                btnAddExpLvl.Text = "";
-            }
-        }
-
 
         private void ViewAllData()
         {
-            conn = new SqlConnection(conString);
-            conn.Open();
+            try
+            {
+                using (conn = new SqlConnection(conString))
+                {
+                    conn.Open();
 
-            string cmdString = "SELECT * FROM EXPERIENCE_LEVEL";
-            cmd = new SqlCommand(cmdString, conn);
+                    string cmdString = "SELECT * FROM EXPERIENCE_LEVEL";
+                    cmd = new SqlCommand(cmdString, conn);
 
-            adpt = new SqlDataAdapter();
-            dset = new DataSet();
-            adpt.SelectCommand = cmd;
-            adpt.Fill(dset, "DANCER");
+                    adpt = new SqlDataAdapter();
+                    dset = new DataSet();
+                    adpt.SelectCommand = cmd;
+                    adpt.Fill(dset, "EXPERIENCE_LEVEL");
 
-            dgvExpLvl.DataSource = dset;
-            dgvExpLvl.DataMember = "DANCER";
+                    dgvExpLvl.DataSource = dset;
+                    dgvExpLvl.DataMember = "EXPERIENCE_LEVEL";
 
-            conn.Close();
+                    conn.Close();
+                }
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void PopulateExperienceLevel()
         {
-            conn = new SqlConnection(conString);
-            conn.Open();
-            cmbExpLvl.Items.Clear();
-
-            string cmdString = "SELECT DISTINCT exp_Desc FROM EXPERIENCE_LEVEL";
-            cmd = new SqlCommand(cmdString, conn);
-
-            reader = cmd.ExecuteReader();
-            while(reader.Read())
+            try
             {
-                cmbExpLvl.Items.Add(reader.GetValue(0));
+                using (conn = new SqlConnection(conString))
+                {
+                    conn.Open();
+                    cmbExpLvl.Items.Clear();
+
+                    string cmdString = "SELECT DISTINCT exp_Desc FROM EXPERIENCE_LEVEL";
+                    cmd = new SqlCommand(cmdString, conn);
+
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        cmbExpLvl.Items.Add(reader.GetValue(0));
+                    }
+                    conn.Close();
+                }
             }
-
-
-            conn.Close();
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }           
         }
 
         private void PopulateDanceType()
         {
-            conn = new SqlConnection(conString);
-            conn.Open();
-            cmbDanceType.Items.Clear();
-
-            string cmdString = "SELECT DISTINCT Type_Desc FROM DANCE_TYPE";
-            cmd = new SqlCommand(cmdString, conn);
-
-            reader = cmd.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                cmbDanceType.Items.Add(reader.GetValue(0));
-            }
+                using (conn = new SqlConnection(conString))
+                {
+                    conn.Open();
+                    cmbDanceType.Items.Clear();
+                    string cmdString = "SELECT DISTINCT Type_Desc FROM DANCE_TYPE";
+                    cmd = new SqlCommand(cmdString, conn);
 
-            conn.Close();
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        cmbDanceType.Items.Add(reader.GetValue(0));
+                    }
+
+                    conn.Close();
+                }
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }    
         }
 
         private void PopulateClasses()
         {
-            conn = new SqlConnection(conString);
-            conn.Open();
-            
-            lstClasses.Items.Clear();
-            string cmdString = "SELECT DISTINCT Class_Description FROM CLASS";
-            cmd = new SqlCommand(cmdString, conn);
-            reader = cmd.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                lstClasses.Items.Add(reader.GetValue(0));
-            }
+                using (conn = new SqlConnection(conString))
+                {
+                    conn.Open();
 
-            conn.Close();
+                    lstClasses.Items.Clear();
+                    string cmdString = "SELECT DISTINCT Class_Description FROM CLASS";
+                    cmd = new SqlCommand(cmdString, conn);
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        lstClasses.Items.Add(reader.GetValue(0));
+                    }
+                    conn.Close();
+                }
+            }
+            catch(SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }     
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -159,12 +159,33 @@ namespace CMPG223_18
             mainPage.ShowDialog();
         }
 
+        private int GetExperienceID()
+        {
+            int experienceID = 0;
+            string expLvl = cmbExpLvl.SelectedItem.ToString();
+            string cmdString = "SELECT exp_ID FROM EXPERIENCE_LEVEL WHERE exp_Desc = @exp_Desc";
+
+            using (conn = new SqlConnection(conString))
+            {
+                cmd = new SqlCommand(cmdString, conn);
+                cmd.Parameters.AddWithValue("@exp_Desc", expLvl);
+
+                conn.Open();
+                reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    experienceID = (int)reader["exp_ID"];
+                }
+                conn.Close();
+            }
+
+            return experienceID;
+        }
+
         private void btnComplete_Click(object sender, EventArgs e)
         {
             if (rdbUpdate.Checked)
             {
-                string updateExpLvl = txtAddExpLvl.Text;
-
                 var confirm = MessageBox.Show("Are you sure you want to update the experience level?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirm == DialogResult.Yes)
@@ -172,46 +193,48 @@ namespace CMPG223_18
                     using (conn = new SqlConnection(conString))
                     {
                         try
-                        {
+                        {                            
+                            string updateTxt = txtAddExpLvl.Text;
+                            int expID = GetExperienceID();
+
+                            string newExpLvl = "UPDATE EXPERIENCE_LEVEL SET exp_Desc = @updateTxt WHERE exp_ID = @expID";
+
+                            cmd = new SqlCommand(newExpLvl, conn);
+                            cmd.Parameters.AddWithValue("@updateTxt", txtAddExpLvl.Text);
+
                             conn.Open();
-                            string update = txtAddExpLvl.Text;
-
-                            string newExpLvl = "UPDATE EXPERIENCE_LEVEL SET exp_Desc = @update";
-
-                            SqlCommand cmd = new SqlCommand(newExpLvl, conn);
-                            cmd.Parameters.AddWithValue("@update", txtAddExpLvl.Text);
 
                             int result = cmd.ExecuteNonQuery();
-
                             if (result > 0)
                             {
                                 MessageBox.Show("Experience level updated succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 dset.Clear();
                                 RefreshDGV();
-                                clearSelection();
+                                ViewAllData();
                             }
                             else
                             {
-                                MessageBox.Show("Failed to update dancer", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Failed to update experience level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             conn.Close();
                         }
-                        catch (Exception ex)
+                        catch (Exception error)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(error.Message);
                         }
                     }
                 }
             }
             else if (rdbDelete.Checked)
             {
-                var confirm = MessageBox.Show("Are you sure you want to delete this dancer", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var confirm = MessageBox.Show("Are you sure you want to delete the experience level", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if(confirm == DialogResult.Yes)
                 {
-                    using (conn = new SqlConnection(conString))
+                    
+                    try
                     {
-                        try
+                        using (conn = new SqlConnection(conString))
                         {
                             string deleteExpLvl = cmbExpLvl.SelectedItem.ToString();
                             string cmdDelete = @"DELETE FROM EXPERIENCE_LEVEL WHERE exp_Desc = @deleteExpLvl";
@@ -220,25 +243,26 @@ namespace CMPG223_18
                             cmd.Parameters.AddWithValue("@deleteExpLvl", deleteExpLvl);
                             conn.Open();
                             int result = cmd.ExecuteNonQuery();
-
                             if (result > 0)
                             {
                                 MessageBox.Show("Experience Level deleted succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 dset.Clear();
                                 RefreshDGV();
+                                RefreshExperienceLvl();
                             }
                             else
                             {
                                 MessageBox.Show("Failed to delete experience level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
 
-                            conn.Close();                            
+                            conn.Close();
                         }
-                        catch(SqlException error)
-                        {
-                            MessageBox.Show(error.Message);
-                        }
+                                                        
                     }
+                    catch(SqlException error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }                    
                 }
             }
             else
@@ -247,46 +271,45 @@ namespace CMPG223_18
 
         private void RefreshDGV()
         {
-            string newDisplay = "SELECT * FROM EXPERIENCE_LEVEL";
-            cmd = new SqlCommand(newDisplay, conn);
+            try
+            {
+                using (conn = new SqlConnection(conString))
+                {
+                    string newDisplay = "SELECT * FROM EXPERIENCE_LEVEL";
+                    cmd = new SqlCommand(newDisplay, conn);
+                    conn.Open();
+                    
+                    adpt = new SqlDataAdapter();
+                    dset = new DataSet();
+                    adpt.SelectCommand = cmd;
+                    adpt.Fill(dset, "EXPERIENCE_LEVEL");
 
-            adpt = new SqlDataAdapter();
-            dset = new DataSet();
-            adpt.SelectCommand = cmd;
-            adpt.Fill(dset, "EXPERIENCE_LEVEL");
+                    dgvExpLvl.DataSource = dset;
+                    dgvExpLvl.DataMember = "EXPERIENCE_LEVEL";
 
-            dgvExpLvl.DataSource = dset;
-            dgvExpLvl.DataMember = "EXPERIENCE_LEVEL";
-
-            conn.Close();
-        }
-
-        private void rdbAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            //clearSelection();
+                    conn.Close();
+                }
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }           
         }
 
         private void btnAddExpLvl_Click(object sender, EventArgs e)
-        {
-            using (conn = new SqlConnection(conString))
+        {          
+            try
             {
-                try
+                if (rdbAdd.Checked)
                 {
-                    if (rdbAdd.Checked)
+                    using (conn = new SqlConnection(conString))
                     {
-                        //validation for fields when not selected
-                        /**if (cmbExpLvl.SelectedItem == null)
-                        {
-                            MessageBox.Show("Please select an experience level from the Experience Level combobox");
-                        }*/
-                        
-                        
                         string newExpLvl = txtAddExpLvl.Text;
                         string cmdString = $"INSERT INTO EXPERIENCE_LEVEL(exp_Desc) VALUES (@newExpLvl)";
 
                         using (insertCmd = new SqlCommand(cmdString, conn))
                         {
-                            insertCmd.Parameters.AddWithValue("@newExpLvl", txtAddExpLvl);
+                            insertCmd.Parameters.AddWithValue("@newExpLvl", txtAddExpLvl.Text);
                             conn.Open();
                             int result = insertCmd.ExecuteNonQuery();
 
@@ -294,22 +317,21 @@ namespace CMPG223_18
                             {
                                 MessageBox.Show("Experience level added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 txtAddExpLvl.Text = "";
-                                RefreshExperienceLvl();                                
+                                RefreshExperienceLvl();
                             }
                             else
                             {
                                 MessageBox.Show("Failed to add dancer", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            conn.Close();                            
+                            conn.Close();
                         }
                     }                    
-                }
-                catch (SqlException error)
-                {
-                    MessageBox.Show(error.Message);
-                }
+                }                                                       
             }
-            
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }    
         }
 
         public void RefreshExperienceLvl()

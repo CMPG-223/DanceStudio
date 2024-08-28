@@ -30,11 +30,7 @@ namespace CMPG223_18
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEnrol));
-            this.gpbEnrolled = new System.Windows.Forms.GroupBox();
-            this.clbEnrolled = new System.Windows.Forms.CheckedListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gpbAvailable = new System.Windows.Forms.GroupBox();
-            this.clbAvailClasses = new System.Windows.Forms.CheckedListBox();
+            this.dgvAllDisplay = new System.Windows.Forms.DataGridView();
             this.gpbDancer = new System.Windows.Forms.GroupBox();
             this.txtDancerID = new System.Windows.Forms.TextBox();
             this.lblDancerID = new System.Windows.Forms.Label();
@@ -50,69 +46,23 @@ namespace CMPG223_18
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.gpbEnrolled.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gpbAvailable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllDisplay)).BeginInit();
             this.gpbDancer.SuspendLayout();
             this.gpbEnrol.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gpbEnrolled
+            // dgvAllDisplay
             // 
-            this.gpbEnrolled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gpbEnrolled.Controls.Add(this.clbEnrolled);
-            this.gpbEnrolled.Location = new System.Drawing.Point(327, 236);
-            this.gpbEnrolled.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbEnrolled.Name = "gpbEnrolled";
-            this.gpbEnrolled.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbEnrolled.Size = new System.Drawing.Size(203, 193);
-            this.gpbEnrolled.TabIndex = 11;
-            this.gpbEnrolled.TabStop = false;
-            this.gpbEnrolled.Text = "Classes Already enrolled";
-            // 
-            // clbEnrolled
-            // 
-            this.clbEnrolled.FormattingEnabled = true;
-            this.clbEnrolled.Location = new System.Drawing.Point(9, 32);
-            this.clbEnrolled.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clbEnrolled.Name = "clbEnrolled";
-            this.clbEnrolled.Size = new System.Drawing.Size(160, 123);
-            this.clbEnrolled.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(580, 74);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(793, 355);
-            this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // gpbAvailable
-            // 
-            this.gpbAvailable.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gpbAvailable.Controls.Add(this.clbAvailClasses);
-            this.gpbAvailable.Location = new System.Drawing.Point(83, 236);
-            this.gpbAvailable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbAvailable.Name = "gpbAvailable";
-            this.gpbAvailable.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbAvailable.Size = new System.Drawing.Size(203, 193);
-            this.gpbAvailable.TabIndex = 9;
-            this.gpbAvailable.TabStop = false;
-            this.gpbAvailable.Text = "Available Classes";
-            // 
-            // clbAvailClasses
-            // 
-            this.clbAvailClasses.FormattingEnabled = true;
-            this.clbAvailClasses.Location = new System.Drawing.Point(9, 32);
-            this.clbAvailClasses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clbAvailClasses.Name = "clbAvailClasses";
-            this.clbAvailClasses.Size = new System.Drawing.Size(160, 123);
-            this.clbAvailClasses.TabIndex = 0;
+            this.dgvAllDisplay.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvAllDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllDisplay.Location = new System.Drawing.Point(580, 74);
+            this.dgvAllDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAllDisplay.Name = "dgvAllDisplay";
+            this.dgvAllDisplay.RowHeadersWidth = 62;
+            this.dgvAllDisplay.RowTemplate.Height = 28;
+            this.dgvAllDisplay.Size = new System.Drawing.Size(793, 355);
+            this.dgvAllDisplay.TabIndex = 10;
+            this.dgvAllDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // gpbDancer
             // 
@@ -302,17 +252,13 @@ namespace CMPG223_18
             this.Controls.Add(this.gpbEnrol);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.gpbEnrolled);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.gpbAvailable);
+            this.Controls.Add(this.dgvAllDisplay);
             this.Controls.Add(this.gpbDancer);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmEnrol";
             this.Text = "Enrol";
             this.Load += new System.EventHandler(this.frmEnrol_Load);
-            this.gpbEnrolled.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.gpbAvailable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllDisplay)).EndInit();
             this.gpbDancer.ResumeLayout(false);
             this.gpbDancer.PerformLayout();
             this.gpbEnrol.ResumeLayout(false);
@@ -322,12 +268,7 @@ namespace CMPG223_18
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gpbEnrolled;
-        private System.Windows.Forms.CheckedListBox clbEnrolled;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox gpbAvailable;
-        private System.Windows.Forms.CheckedListBox clbAvailClasses;
+        private System.Windows.Forms.DataGridView dgvAllDisplay;
         private System.Windows.Forms.GroupBox gpbDancer;
         private System.Windows.Forms.Label lblDancerID;
         private System.Windows.Forms.Label label2;

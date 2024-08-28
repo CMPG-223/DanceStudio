@@ -102,7 +102,6 @@ namespace CMPG223_18
             this.rdbAdd.TabStop = true;
             this.rdbAdd.Text = "Add Experience level";
             this.rdbAdd.UseVisualStyleBackColor = true;
-            this.rdbAdd.CheckedChanged += new System.EventHandler(this.rdbAdd_CheckedChanged);
             // 
             // cmbExpLvl
             // 
@@ -177,7 +176,7 @@ namespace CMPG223_18
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(62, 274);
+            this.lblClass.Location = new System.Drawing.Point(362, 238);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(57, 17);
             this.lblClass.TabIndex = 12;
@@ -188,10 +187,10 @@ namespace CMPG223_18
             this.lstClasses.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lstClasses.FormattingEnabled = true;
             this.lstClasses.ItemHeight = 16;
-            this.lstClasses.Location = new System.Drawing.Point(66, 293);
+            this.lstClasses.Location = new System.Drawing.Point(365, 257);
             this.lstClasses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstClasses.Name = "lstClasses";
-            this.lstClasses.Size = new System.Drawing.Size(223, 100);
+            this.lstClasses.Size = new System.Drawing.Size(603, 260);
             this.lstClasses.TabIndex = 13;
             this.lstClasses.Tag = "";
             // 
@@ -199,19 +198,19 @@ namespace CMPG223_18
             // 
             this.dgvExpLvl.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvExpLvl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExpLvl.Location = new System.Drawing.Point(365, 225);
+            this.dgvExpLvl.Location = new System.Drawing.Point(45, 269);
             this.dgvExpLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvExpLvl.Name = "dgvExpLvl";
             this.dgvExpLvl.RowHeadersWidth = 62;
             this.dgvExpLvl.RowTemplate.Height = 28;
-            this.dgvExpLvl.Size = new System.Drawing.Size(661, 296);
+            this.dgvExpLvl.Size = new System.Drawing.Size(222, 235);
             this.dgvExpLvl.TabIndex = 14;
             // 
             // btnComplete
             // 
             this.btnComplete.BackColor = System.Drawing.Color.OldLace;
             this.btnComplete.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplete.Location = new System.Drawing.Point(85, 473);
+            this.btnComplete.Location = new System.Drawing.Point(416, 559);
             this.btnComplete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(183, 39);

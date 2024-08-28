@@ -24,7 +24,7 @@ namespace CMPG223_18
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            frmExperienceLevel currentpage = new frmExperienceLevel();
+            frmEnrol currentpage = new frmEnrol();
             currentpage.ShowDialog();
             this.Close();
 
