@@ -48,9 +48,10 @@ namespace CMPG223_18
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
             this.pcbLogo.InitialImage = null;
-            this.pcbLogo.Location = new System.Drawing.Point(177, 36);
+            this.pcbLogo.Location = new System.Drawing.Point(118, 23);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(573, 302);
+            this.pcbLogo.Size = new System.Drawing.Size(382, 196);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 1;
             this.pcbLogo.TabStop = false;
@@ -59,85 +60,98 @@ namespace CMPG223_18
             // 
             this.btnDancers.BackColor = System.Drawing.Color.OldLace;
             this.btnDancers.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDancers.Location = new System.Drawing.Point(147, 389);
+            this.btnDancers.Location = new System.Drawing.Point(98, 253);
+            this.btnDancers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDancers.Name = "btnDancers";
-            this.btnDancers.Size = new System.Drawing.Size(206, 49);
+            this.btnDancers.Size = new System.Drawing.Size(137, 32);
             this.btnDancers.TabIndex = 2;
             this.btnDancers.Text = "Dancers";
             this.btnDancers.UseVisualStyleBackColor = false;
+            this.btnDancers.Click += new System.EventHandler(this.btnDancers_Click);
             // 
             // btnEnrol
             // 
             this.btnEnrol.BackColor = System.Drawing.Color.OldLace;
             this.btnEnrol.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnrol.Location = new System.Drawing.Point(147, 460);
+            this.btnEnrol.Location = new System.Drawing.Point(98, 299);
+            this.btnEnrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEnrol.Name = "btnEnrol";
-            this.btnEnrol.Size = new System.Drawing.Size(206, 49);
+            this.btnEnrol.Size = new System.Drawing.Size(137, 32);
             this.btnEnrol.TabIndex = 3;
             this.btnEnrol.Text = "Enrol";
             this.btnEnrol.UseVisualStyleBackColor = false;
+            this.btnEnrol.Click += new System.EventHandler(this.btnEnrol_Click);
             // 
             // btnClasses
             // 
             this.btnClasses.BackColor = System.Drawing.Color.OldLace;
             this.btnClasses.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClasses.Location = new System.Drawing.Point(357, 389);
+            this.btnClasses.Location = new System.Drawing.Point(238, 253);
+            this.btnClasses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClasses.Name = "btnClasses";
-            this.btnClasses.Size = new System.Drawing.Size(206, 49);
+            this.btnClasses.Size = new System.Drawing.Size(137, 32);
             this.btnClasses.TabIndex = 4;
             this.btnClasses.Text = "Classes";
             this.btnClasses.UseVisualStyleBackColor = false;
+            this.btnClasses.Click += new System.EventHandler(this.btnClasses_Click);
             // 
             // btnPayments
             // 
             this.btnPayments.BackColor = System.Drawing.Color.OldLace;
             this.btnPayments.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayments.Location = new System.Drawing.Point(357, 460);
+            this.btnPayments.Location = new System.Drawing.Point(238, 299);
+            this.btnPayments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPayments.Name = "btnPayments";
-            this.btnPayments.Size = new System.Drawing.Size(206, 49);
+            this.btnPayments.Size = new System.Drawing.Size(137, 32);
             this.btnPayments.TabIndex = 5;
             this.btnPayments.Text = "Payments";
             this.btnPayments.UseVisualStyleBackColor = false;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnTeachers
             // 
             this.btnTeachers.BackColor = System.Drawing.Color.OldLace;
             this.btnTeachers.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeachers.Location = new System.Drawing.Point(568, 389);
+            this.btnTeachers.Location = new System.Drawing.Point(379, 253);
+            this.btnTeachers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTeachers.Name = "btnTeachers";
-            this.btnTeachers.Size = new System.Drawing.Size(206, 49);
+            this.btnTeachers.Size = new System.Drawing.Size(137, 32);
             this.btnTeachers.TabIndex = 6;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.UseVisualStyleBackColor = false;
+            this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
             // 
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.OldLace;
             this.btnReports.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.Location = new System.Drawing.Point(568, 460);
+            this.btnReports.Location = new System.Drawing.Point(379, 299);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(206, 49);
+            this.btnReports.Size = new System.Drawing.Size(137, 32);
             this.btnReports.TabIndex = 7;
             this.btnReports.Text = "Reports";
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.OldLace;
             this.btnLogOut.Font = new System.Drawing.Font("Modern No. 20", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(860, 540);
+            this.btnLogOut.Location = new System.Drawing.Point(573, 351);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(84, 31);
+            this.btnLogOut.Size = new System.Drawing.Size(56, 20);
             this.btnLogOut.TabIndex = 8;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(956, 583);
+            this.ClientSize = new System.Drawing.Size(637, 379);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnTeachers);
@@ -146,6 +160,7 @@ namespace CMPG223_18
             this.Controls.Add(this.btnEnrol);
             this.Controls.Add(this.btnDancers);
             this.Controls.Add(this.pcbLogo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
             this.Text = "Main";
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
