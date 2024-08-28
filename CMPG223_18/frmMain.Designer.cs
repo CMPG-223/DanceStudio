@@ -65,6 +65,7 @@ namespace CMPG223_18
             this.btnDancers.TabIndex = 2;
             this.btnDancers.Text = "Dancers";
             this.btnDancers.UseVisualStyleBackColor = false;
+            this.btnDancers.Click += new System.EventHandler(this.btnDancers_Click);
             // 
             // btnEnrol
             // 
@@ -76,6 +77,7 @@ namespace CMPG223_18
             this.btnEnrol.TabIndex = 3;
             this.btnEnrol.Text = "Enrol";
             this.btnEnrol.UseVisualStyleBackColor = false;
+            this.btnEnrol.Click += new System.EventHandler(this.btnEnrol_Click);
             // 
             // btnClasses
             // 
@@ -87,6 +89,7 @@ namespace CMPG223_18
             this.btnClasses.TabIndex = 4;
             this.btnClasses.Text = "Classes";
             this.btnClasses.UseVisualStyleBackColor = false;
+            this.btnClasses.Click += new System.EventHandler(this.btnClasses_Click);
             // 
             // btnPayments
             // 
@@ -98,6 +101,7 @@ namespace CMPG223_18
             this.btnPayments.TabIndex = 5;
             this.btnPayments.Text = "Payments";
             this.btnPayments.UseVisualStyleBackColor = false;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnTeachers
             // 
@@ -109,6 +113,7 @@ namespace CMPG223_18
             this.btnTeachers.TabIndex = 6;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.UseVisualStyleBackColor = false;
+            this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
             // 
             // btnReports
             // 
@@ -120,6 +125,7 @@ namespace CMPG223_18
             this.btnReports.TabIndex = 7;
             this.btnReports.Text = "Reports";
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnLogOut
             // 
@@ -131,6 +137,7 @@ namespace CMPG223_18
             this.btnLogOut.TabIndex = 8;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // frmMain
             // 

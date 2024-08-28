@@ -33,12 +33,13 @@ namespace CMPG223_18
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblDancerID = new System.Windows.Forms.Label();
             this.lblFName = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.Label();
             this.lblLName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grpExpLvl = new System.Windows.Forms.GroupBox();
             this.rdbDelete = new System.Windows.Forms.RadioButton();
             this.rdbUpdate = new System.Windows.Forms.RadioButton();
@@ -46,7 +47,6 @@ namespace CMPG223_18
             this.dgvDancers = new System.Windows.Forms.DataGridView();
             this.lblDataGrid = new System.Windows.Forms.Label();
             this.btnComplete = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -68,6 +68,7 @@ namespace CMPG223_18
             // 
             // btnLogOut
             // 
+            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogOut.BackColor = System.Drawing.Color.OldLace;
             this.btnLogOut.Font = new System.Drawing.Font("Modern No. 20", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Location = new System.Drawing.Point(809, 651);
@@ -79,6 +80,7 @@ namespace CMPG223_18
             // 
             // pnlSearch
             // 
+            this.pnlSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnlSearch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlSearch.Controls.Add(this.textBox2);
             this.pnlSearch.Controls.Add(this.textBox1);
@@ -89,8 +91,25 @@ namespace CMPG223_18
             this.pnlSearch.Size = new System.Drawing.Size(250, 154);
             this.pnlSearch.TabIndex = 12;
             // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox2.Location = new System.Drawing.Point(31, 108);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(189, 26);
+            this.textBox2.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.Location = new System.Drawing.Point(31, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(189, 26);
+            this.textBox1.TabIndex = 1;
+            // 
             // lblSearch
             // 
+            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(27, 17);
             this.lblSearch.Name = "lblSearch";
@@ -100,6 +119,7 @@ namespace CMPG223_18
             // 
             // lblDancerID
             // 
+            this.lblDancerID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDancerID.AutoSize = true;
             this.lblDancerID.Location = new System.Drawing.Point(27, 85);
             this.lblDancerID.Name = "lblDancerID";
@@ -109,6 +129,7 @@ namespace CMPG223_18
             // 
             // lblFName
             // 
+            this.lblFName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFName.AutoSize = true;
             this.lblFName.Location = new System.Drawing.Point(56, 491);
             this.lblFName.Name = "lblFName";
@@ -118,6 +139,7 @@ namespace CMPG223_18
             // 
             // dtpDOB
             // 
+            this.dtpDOB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpDOB.AutoSize = true;
             this.dtpDOB.Location = new System.Drawing.Point(56, 635);
             this.dtpDOB.Name = "dtpDOB";
@@ -127,6 +149,7 @@ namespace CMPG223_18
             // 
             // lblLName
             // 
+            this.lblLName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLName.AutoSize = true;
             this.lblLName.Location = new System.Drawing.Point(56, 563);
             this.lblLName.Name = "lblLName";
@@ -134,15 +157,9 @@ namespace CMPG223_18
             this.lblLName.TabIndex = 16;
             this.lblLName.Text = "Last Name";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(31, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 26);
-            this.textBox1.TabIndex = 1;
-            // 
             // grpExpLvl
             // 
+            this.grpExpLvl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.grpExpLvl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.grpExpLvl.Controls.Add(this.rdbDelete);
             this.grpExpLvl.Controls.Add(this.rdbUpdate);
@@ -156,6 +173,7 @@ namespace CMPG223_18
             // 
             // rdbDelete
             // 
+            this.rdbDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbDelete.AutoSize = true;
             this.rdbDelete.Location = new System.Drawing.Point(21, 143);
             this.rdbDelete.Name = "rdbDelete";
@@ -167,6 +185,7 @@ namespace CMPG223_18
             // 
             // rdbUpdate
             // 
+            this.rdbUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbUpdate.AutoSize = true;
             this.rdbUpdate.Location = new System.Drawing.Point(21, 99);
             this.rdbUpdate.Name = "rdbUpdate";
@@ -178,6 +197,7 @@ namespace CMPG223_18
             // 
             // rdbAdd
             // 
+            this.rdbAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbAdd.AutoSize = true;
             this.rdbAdd.Location = new System.Drawing.Point(21, 55);
             this.rdbAdd.Name = "rdbAdd";
@@ -189,17 +209,20 @@ namespace CMPG223_18
             // 
             // dgvDancers
             // 
+            this.dgvDancers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDancers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvDancers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDancers.Location = new System.Drawing.Point(411, 99);
             this.dgvDancers.Name = "dgvDancers";
             this.dgvDancers.RowHeadersWidth = 62;
             this.dgvDancers.RowTemplate.Height = 28;
-            this.dgvDancers.Size = new System.Drawing.Size(342, 364);
+            this.dgvDancers.Size = new System.Drawing.Size(342, 511);
             this.dgvDancers.TabIndex = 18;
             // 
             // lblDataGrid
             // 
+            this.lblDataGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDataGrid.AutoSize = true;
             this.lblDataGrid.Location = new System.Drawing.Point(407, 69);
             this.lblDataGrid.Name = "lblDataGrid";
@@ -209,24 +232,19 @@ namespace CMPG223_18
             // 
             // btnComplete
             // 
+            this.btnComplete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnComplete.BackColor = System.Drawing.Color.OldLace;
             this.btnComplete.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplete.Location = new System.Drawing.Point(547, 498);
+            this.btnComplete.Location = new System.Drawing.Point(547, 633);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(206, 49);
             this.btnComplete.TabIndex = 20;
             this.btnComplete.Text = "Complete";
             this.btnComplete.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(31, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 26);
-            this.textBox2.TabIndex = 14;
-            // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox3.Location = new System.Drawing.Point(60, 514);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(189, 26);
@@ -234,6 +252,7 @@ namespace CMPG223_18
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox4.Location = new System.Drawing.Point(60, 586);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(189, 26);
@@ -241,6 +260,7 @@ namespace CMPG223_18
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker1.Location = new System.Drawing.Point(60, 658);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(189, 26);
