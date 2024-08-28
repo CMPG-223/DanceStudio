@@ -1,0 +1,137 @@
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\bin\Debug\CMPG223_18.exe.config
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\bin\Debug\CMPG223_18.exe
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\bin\Debug\CMPG223_18.pdb
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.exe
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.pdb
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\User\source\repos\CMPG-223\DanceStudio\CMPG223_18\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project - Copy\CMPG223_18_Templates\obj\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Add - Copy\obj\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\CMPG223_18_Teahcer_Delete - Copy\obj\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.4CMPG223_18_Teahcer_Update\obj\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.5CMPG223_18_Class_Add\obj\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update\obj\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\bin\Debug\CMPG223_18.exe.config
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\bin\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\bin\Debug\CMPG223_18.pdb
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.csproj.AssemblyReference.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmClasses.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmDancers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmEnrol.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmExperienceLevel.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmLogIn.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmMain.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmPayments.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmReports.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.frmTeachers.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.Properties.Resources.resources
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.csproj.GenerateResource.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.csproj.CoreCompileInputs.cache
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.exe
+C:\Users\zanke\OneDrive\Documents\Semester 2\CMPG 223\Group Project\Back up of project\1.6CMPG223_18_Class_Update - Copy\obj\Debug\CMPG223_18.pdb
