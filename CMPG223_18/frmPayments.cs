@@ -35,7 +35,7 @@ namespace CMPG223_18
             //View data in datagridview
             populateDGV();
             //populate values in combobox
-            FillComboBox();
+           // FillComboBox();
         }
 
         private void populateDGV()
@@ -96,8 +96,60 @@ namespace CMPG223_18
             return dancerID;
         }
 
-        private void FillComboBox()
+       // private DateTime GetDancerDoB(int Dancer_ID)
+      //  {
+            /*DateTime dancerDoB = 0;
+            string query = "SELECT Dancer_DoB FROM Dancer WHERE Dancer_ID = @Dancer_ID";
+
+            using (SqlConnection con = new SqlConnection(connectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("Dancer_ID", Dancer_ID);
+
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        dancerDoB = (DateTime)reader["Dancer_DoB"];
+                    }
+
+                    con.Close();
+                }
+            }
+
+            return dancerDoB;*/
+        //}
+        
+        private Double GetDancerTotalClasses(int Dancer_ID)
         {
+            Double TotalClassesFee = 0;
+            string query = "SELECT Dancer_Total_All_Classes FROM Dancer WHERE Dancer_ID = @Dancer_ID";
+
+            using (SqlConnection con = new SqlConnection(connectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("Dancer_ID", Dancer_ID);
+
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        TotalClassesFee = (Double)reader["Dancer_DoB"];
+                    }
+
+                    con.Close();
+                }
+            }
+
+            return TotalClassesFee;
+        }
+
+        private void FillComboBox()
+        {/*
             try
             {
                 using (SqlConnection con = new SqlConnection(connectString))
@@ -121,7 +173,7 @@ namespace CMPG223_18
             catch (SqlException error)
             {
                 MessageBox.Show(error.Message);
-            }
+            }*/
         }
 
         private void FilterDGV(int dancerID)
@@ -215,6 +267,7 @@ namespace CMPG223_18
             }
 
             Dancer_ID = GetDancerID(Dancer_FName, Dancer_LName);
+
             if (Dancer_ID == 0)
             {
                 MessageBox.Show("Dancer not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -227,50 +280,101 @@ namespace CMPG223_18
 
                 return;
             }
-
-            string query = "INSERT INTO Payment_Received (Dancer_ID, Received_Payment, Payment_DateTime) " +
-                            " VALUES (@Dancer_ID, @Received_Payment, @Payment_DateTime)";
+            
+            //add to dancer
+            //string qDancer = "INSERT INTO Dancer (Dancer_FName, Dancer_LName, Dancer_DoB, Dancer_Total_All_Classes) " +
+           //                 " VALUES (@Dancer_ID, @Dancer_FName, @Dancer_LName, @Dancer_DoB, @Dancer_Total_All_Classes,)";
 
             using (SqlConnection con = new SqlConnection(connectString))
             {
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                con.Open();
+                SqlTransaction transaction = con.BeginTransaction();
+
+                try
                 {
-                    cmd.Parameters.AddWithValue("@Dancer_ID", Dancer_ID);                    
-                    cmd.Parameters.AddWithValue("@Received_Payment", Received_Payment);                    
-                    cmd.Parameters.AddWithValue("@Payment_DateTime", Payment_DateTime);
+                    //Add to payments received
+                    string query = "INSERT INTO Payment_Received (Dancer_ID, Received_Payment, Payment_DateTime) " +
+                                    " VALUES (@Dancer_ID, @Received_Payment, @Payment_DateTime)";
 
-                    con.Open();
-
-                    int result = cmd.ExecuteNonQuery();
-
-                    if (result > 0)
+                    using (SqlCommand cmd = new SqlCommand(query, con, transaction))
                     {
-                        MessageBox.Show("Payment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtDancerFName.Text = "";
-                        txtDancerLName.Text = "";
-                        dtpDatePaid.Value = DateTime.Today;
-                        txtPay.Text = "";
-                        txtPayable.Text = "";
-                        populateDGV();
-                        }
-                    else
-                    {
-                        MessageBox.Show("Failed to add payment", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cmd.Parameters.AddWithValue("@Dancer_ID", Dancer_ID);
+                        cmd.Parameters.AddWithValue("@Received_Payment", Received_Payment);
+                        cmd.Parameters.AddWithValue("@Payment_DateTime", Payment_DateTime);
+
+                        cmd.ExecuteNonQuery();
                     }
-                    con.Close();
+
+                    //update dancer's received payments
+                    string updateDancerQuery = "UPDATE Dancer SET Total_Received = Total_Received + @Received_Payment WHERE Dancer_ID = @Dancer_ID";
+
+                    using (SqlCommand updateCmd = new SqlCommand(updateDancerQuery, con, transaction))
+                    {
+                        updateCmd.Parameters.AddWithValue("@Received_Payment", Received_Payment);
+                        updateCmd.Parameters.AddWithValue("@Dancer_ID", Dancer_ID);
+
+                        updateCmd.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+
+                    MessageBox.Show("Payment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtDancerFName.Text = "";
+                    txtDancerLName.Text = "";
+                    dtpDatePaid.Value = DateTime.Today;
+                    txtPay.Text = "";
+                    txtPayable.Text = "";
+
+                    populateDGV();
                 }
+                catch (SqlException ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Failed to add payment: " + ex.Message, "Failed",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
 
         private void cmbSearchPay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbSearchPay.SelectedValue != null && int.TryParse(cmbSearchPay.SelectedValue.ToString(), out int selectedDancerID))
+            /*if (cmbSearchPay.SelectedValue != null && int.TryParse(cmbSearchPay.SelectedValue.ToString(), out int selectedDancerID))
             {
                 FilterDGV(selectedDancerID);
             }
             else
             {
                 populateDGV();
+            }*/
+        }
+
+        private void txtDancerFName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDancerFName.Focus();
+            }
+        }
+
+        private void dtpDatePaid_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPayable.Focus();
+        }
+
+        private void txtPayable_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPay.Focus();
+            }
+        }
+
+        private void txtPay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAdd_Click(this, EventArgs.Empty);
             }
         }
 
@@ -345,3 +449,19 @@ namespace CMPG223_18
     }
 }
 //Add as enter druk na volgende text box
+
+// if (result > 0)
+ //                       {
+  //                          MessageBox.Show("Payment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+ //                           txtDancerFName.Text = "";
+//                            txtDancerLName.Text = "";
+ //                           dtpDatePaid.Value = DateTime.Today;
+ //                           txtPay.Text = "";
+//                            txtPayable.Text = "";
+ //                           populateDGV();
+ //                       }
+ //                       else
+//                        {
+ //                           MessageBox.Show("Failed to add payment", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+ //                       }
+ //                       con.Close();

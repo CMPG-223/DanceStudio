@@ -14,7 +14,7 @@ namespace CMPG223_18
     public partial class frmReports : Form
     {
         //connection
-        public String connectString = "Data Source=laptop-e2jafdm7\\sqlexpress;Initial Catalog=DanceStudio;Integrated Security=True";
+        public String connectString = "Data Source=LAPTOP-E2JAFDM7\\SQLEXPRESS;Initial Catalog=DanceStudio;Integrated Security=True";
         //other public var
         public SqlConnection con = new SqlConnection();
         public SqlCommand command;
@@ -47,6 +47,9 @@ namespace CMPG223_18
             {
                 //Disable sorting because not neccesary
                 cmbSortBy.Enabled = false;
+                lblSort.Enabled = false;
+
+                lblExplain.Text = "Dance types are ranked by number of dancers taking it";
 
                 //Display top 3 dance types
                 try
@@ -55,9 +58,13 @@ namespace CMPG223_18
                     {
                         con.Open();
 
-                        string showTop3 = @"SELECT TOP 3 COUNT(c.Dance_Type_ID) AS [Number of dance types], dt.Type_Desc FROM Dance_Type dt " +
-                                             "JOIN [Class] c ON dt.Dance_Type_ID = c.Dance_Type_ID WHERE c.Class_DateTime BETWEEN @startDate AND @endDate" +
-                                             " GROUP BY dt.Type_Desc ORDER BY COUNT(c.Dance_Type_ID) DESC";
+                        string showTop3 = @"With RankedDanceTypes AS (SELECT COUNT(ec.Dancer_ID) AS [Number of Students], dt.Type_Desc AS [Dance Type], " +
+                                             "ROW_NUMBER() OVER (ORDER BY COUNT(ec.Dancer_ID) DESC) AS Rank " +
+                                             "FROM Dance_Type dt " +
+                                             "JOIN [Class] c ON dt.Dance_Type_ID = c.Dance_Type_ID JOIN Enrollment_Class ec ON c.Class_ID = ec.Class_ID " +
+                                             "WHERE c.Class_DateTime BETWEEN @startDate AND @endDate " +
+                                             " GROUP BY dt.Type_Desc ) " +
+                                             "SELECT TOP 3 Rank, [Dance Type], [Number of Students] FROM RankedDanceTypes ";
 
                         using (SqlCommand command = new SqlCommand(showTop3, con))
                         {
@@ -83,6 +90,8 @@ namespace CMPG223_18
             {
                 //Enable sorting
                 cmbSortBy.Enabled = true;
+
+                lblExplain.Text = "Dancers who owe us money and how much are displayed.";
 
                 //Display outstanding payments
                 try
@@ -225,6 +234,26 @@ namespace CMPG223_18
                     MessageBox.Show(error.Message);
                 }
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Report in queue for printing.","Information",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            rdbTop3Dance_CheckedChanged(sender, e);
+        }
+
+        private void dtpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            rdbTop3Dance_CheckedChanged(sender, e);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

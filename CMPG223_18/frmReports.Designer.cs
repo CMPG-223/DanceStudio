@@ -29,6 +29,7 @@ namespace CMPG223_18
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReports));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -43,6 +44,10 @@ namespace CMPG223_18
             this.lblSort = new System.Windows.Forms.Label();
             this.dgvReports = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblExplain = new System.Windows.Forms.Label();
+            this.ttChoose = new System.Windows.Forms.ToolTip(this.components);
             this.gpbReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +84,7 @@ namespace CMPG223_18
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(135, 20);
             this.dtpEndDate.TabIndex = 20;
+            this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
             // lblEndDate
             // 
@@ -98,6 +104,7 @@ namespace CMPG223_18
             this.dtpStartDate.Size = new System.Drawing.Size(135, 20);
             this.dtpStartDate.TabIndex = 18;
             this.dtpStartDate.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
             // 
             // gpbReports
             // 
@@ -112,6 +119,7 @@ namespace CMPG223_18
             this.gpbReports.TabIndex = 17;
             this.gpbReports.TabStop = false;
             this.gpbReports.Text = "Please choose what report you want to see";
+            this.ttChoose.SetToolTip(this.gpbReports, "Choose what report you want to see here");
             // 
             // rdbOutPay
             // 
@@ -155,8 +163,8 @@ namespace CMPG223_18
             this.cmbSortBy.Items.AddRange(new object[] {
             "Alphabetical (A-Z)",
             "Alphabetical (Z-A)",
-            "Most outstaning",
-            "Least outstanding"});
+            "Most in debt",
+            "Least in debt"});
             this.cmbSortBy.Location = new System.Drawing.Point(82, 190);
             this.cmbSortBy.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSortBy.Name = "cmbSortBy";
@@ -199,12 +207,54 @@ namespace CMPG223_18
             this.label1.Text = "Reports";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.OldLace;
+            this.btnExport.Font = new System.Drawing.Font("Modern No. 20", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(720, 48);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(56, 20);
+            this.btnExport.TabIndex = 22;
+            this.btnExport.Text = "Print Report";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(720, 128);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Explanation:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblExplain
+            // 
+            this.lblExplain.AutoSize = true;
+            this.lblExplain.Location = new System.Drawing.Point(720, 152);
+            this.lblExplain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblExplain.Name = "lblExplain";
+            this.lblExplain.Size = new System.Drawing.Size(65, 13);
+            this.lblExplain.TabIndex = 24;
+            this.lblExplain.Text = "Explanation:";
+            // 
+            // ttChoose
+            // 
+            this.ttChoose.Tag = "Choose either of the buttons to get that report";
+            // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(806, 429);
+            this.ClientSize = new System.Drawing.Size(910, 429);
+            this.Controls.Add(this.lblExplain);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.lblEndDate);
@@ -243,5 +293,9 @@ namespace CMPG223_18
         private System.Windows.Forms.Label lblSort;
         private System.Windows.Forms.DataGridView dgvReports;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblExplain;
+        private System.Windows.Forms.ToolTip ttChoose;
     }
 }

@@ -29,6 +29,7 @@ namespace CMPG223_18
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDancers));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@ namespace CMPG223_18
             this.txtDFName = new System.Windows.Forms.TextBox();
             this.txtDLName = new System.Windows.Forms.TextBox();
             this.dtp = new System.Windows.Forms.DateTimePicker();
+            this.ttComplete = new System.Windows.Forms.ToolTip(this.components);
             this.grpExpLvl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDancers)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +87,7 @@ namespace CMPG223_18
             this.txtDancerID.Size = new System.Drawing.Size(127, 20);
             this.txtDancerID.TabIndex = 14;
             this.txtDancerID.TextChanged += new System.EventHandler(this.txtDancerID_TextChanged);
+            this.txtDancerID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDancerID_KeyDown);
             this.txtDancerID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDancerID_KeyUp);
             // 
             // lblDancerID
@@ -213,6 +216,7 @@ namespace CMPG223_18
             this.btnComplete.Size = new System.Drawing.Size(137, 32);
             this.btnComplete.TabIndex = 20;
             this.btnComplete.Text = "Complete";
+            this.ttComplete.SetToolTip(this.btnComplete, "Click here to save the data that was entered");
             this.btnComplete.UseVisualStyleBackColor = false;
             this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
@@ -224,6 +228,7 @@ namespace CMPG223_18
             this.txtDFName.Size = new System.Drawing.Size(127, 20);
             this.txtDFName.TabIndex = 22;
             this.txtDFName.TextChanged += new System.EventHandler(this.txtDFName_TextChanged);
+            this.txtDFName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDFName_KeyDown);
             // 
             // txtDLName
             // 
@@ -241,6 +246,12 @@ namespace CMPG223_18
             this.dtp.Name = "dtp";
             this.dtp.Size = new System.Drawing.Size(127, 20);
             this.dtp.TabIndex = 24;
+            this.dtp.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
+            this.dtp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtp_MouseDown);
+            // 
+            // ttComplete
+            // 
+            this.ttComplete.Tag = "Click here when want save data that was entered";
             // 
             // frmDancers
             // 
@@ -293,5 +304,6 @@ namespace CMPG223_18
         private System.Windows.Forms.TextBox txtDFName;
         private System.Windows.Forms.TextBox txtDLName;
         private System.Windows.Forms.DateTimePicker dtp;
+        private System.Windows.Forms.ToolTip ttComplete;
     }
 }

@@ -30,10 +30,15 @@ namespace CMPG223_18
         {
             //View data in datagridview
             populateDGV();
+
+            lblDancerID.Enabled = false;
+            txtDancerID.Enabled = false;
         }
 
         private void populateDGV()
         {
+            dgvDancers.DefaultCellStyle.SelectionBackColor = Color.Beige;
+            dgvDancers.DefaultCellStyle.SelectionForeColor = Color.Black;
             try
             {
                 con = new SqlConnection(connectString);
@@ -124,6 +129,21 @@ namespace CMPG223_18
             return dancerID;
         }
 
+        private void ValidateID()
+        {
+            //validate iD is int
+            if (int.TryParse(txtDancerID.Text, out int Dancer_ID))
+            {
+                //Continue as normal
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid integer");
+                txtDancerID.Focus();
+                return;
+            }
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -156,6 +176,16 @@ namespace CMPG223_18
             Dancer_FName = txtDFName.Text.Trim();
             Dancer_LName = txtDLName.Text.Trim();
             Dancer_DoB = dtp.Value.Date;
+            DateTime maxAge = new DateTime(1994, 12, 31);
+            DateTime minAge = new DateTime(2019, 12, 31);
+            MessageBox.Show(maxAge + " " + minAge);
+
+            //validation for age range
+            if ((Dancer_DoB < maxAge.Date) || (Dancer_DoB > minAge.Date))
+            {
+                MessageBox.Show("Dancer may not be added due to age restrictions.");
+                return;
+            }
 
             //determine which radio button is checked
             if (rdbAdd.Checked)
@@ -176,10 +206,10 @@ namespace CMPG223_18
                 {
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@Dancer_FName", Dancer_FName);                    
-                        cmd.Parameters.AddWithValue("@Dancer_LName", Dancer_LName);                    
-                        cmd.Parameters.AddWithValue("@Dancer_DoB", Dancer_DoB);                    
-                        cmd.Parameters.AddWithValue("@Dancer_Total_All_Classes", Dancer_Total_All_Classes);                    
+                        cmd.Parameters.AddWithValue("@Dancer_FName", Dancer_FName);
+                        cmd.Parameters.AddWithValue("@Dancer_LName", Dancer_LName);
+                        cmd.Parameters.AddWithValue("@Dancer_DoB", Dancer_DoB);
+                        cmd.Parameters.AddWithValue("@Dancer_Total_All_Classes", Dancer_Total_All_Classes);
                         cmd.Parameters.AddWithValue("@Total_Received", Total_Received);
 
                         con.Open();
@@ -274,7 +304,7 @@ namespace CMPG223_18
 
                             if (Dancer_ID != databaseDancerID)
                             {
-                                MessageBox.Show("You may not update an ID","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("You may not update an ID", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 txtDancerID.Text = "";
                                 return;
                             }
@@ -307,35 +337,49 @@ namespace CMPG223_18
 
         }
 
+        //Find dancer when ID is typed in
         private void txtDancerID_TextChanged(object sender, EventArgs e)
-        {            
-            if (string.IsNullOrEmpty(txtDancerID.Text))
-            {
-                populateDGV();
-            }
-            else
-            {
-                con = new SqlConnection(connectString);
-                con.Open();
-
-                string searchString = @"SELECT * FROM Dancer WHERE Dancer_ID = '" + txtDancerID.Text + "'";
-                SqlDataAdapter adapter = new SqlDataAdapter(searchString, con);
-                ds.Clear();
-                adapter.Fill(ds, "Dancer");
-
-                con.Close();
-
-                if (ds.Tables["Dancer"].Rows.Count > 0)
+        {
+            int Dancer_ID = 0;
+             
+             if (string.IsNullOrEmpty(txtDancerID.Text))
+             {
+                 populateDGV();
+                 return;
+             }
+             else 
+             {
+                if (!int.TryParse(txtDancerID.Text, out Dancer_ID))
                 {
-                    DataRow row = ds.Tables["Dancer"].Rows[0];
-                    txtDFName.Text = row["Dancer_FName"].ToString();
-                    txtDLName.Text = row["Dancer_LName"].ToString();
-                    dtp.Value = Convert.ToDateTime(row["Dancer_DoB"]);
+                    MessageBox.Show("You can only type in integers here", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtDancerID.Focus();
+                    txtDancerID.Text = "";
+                    return;
                 }
+                else 
+                {
+                    con = new SqlConnection(connectString);
+                    con.Open();
 
-                dgvDancers.DataSource = ds.Tables["Dancer"].DefaultView;
-            }
-        }
+                    string searchString = @"SELECT * FROM Dancer WHERE Dancer_ID = '" + txtDancerID.Text + "'";
+                    SqlDataAdapter adapter = new SqlDataAdapter(searchString, con);
+                    ds.Clear();
+                    adapter.Fill(ds, "Dancer");
+
+                    con.Close();
+
+                    if (ds.Tables["Dancer"].Rows.Count > 0)
+                    {
+                        DataRow row = ds.Tables["Dancer"].Rows[0];
+                        txtDFName.Text = row["Dancer_FName"].ToString();
+                        txtDLName.Text = row["Dancer_LName"].ToString();
+                        dtp.Value = Convert.ToDateTime(row["Dancer_DoB"]);
+                    }
+
+                    dgvDancers.DataSource = ds.Tables["Dancer"].DefaultView;
+                }
+             }
+        }           
 
         private void txtDancerID_KeyUp(object sender, KeyEventArgs e)
         {
@@ -347,6 +391,7 @@ namespace CMPG223_18
 
         private void txtDFName_TextChanged(object sender, EventArgs e)
         {
+
             /*if (string.IsNullOrEmpty(txtDFName.Text))
             {
                 populateDGV();
@@ -449,8 +494,32 @@ namespace CMPG223_18
                 dgvDancers.DataSource = ds.Tables["Dancer"].DefaultView;
             }*/
         }
-    }
 
-    //Will nog doen
-    //  -boodskap vra spesifieke mense
+        private void txtDancerID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDFName.Focus();
+            }
+        }
+
+        private void txtDFName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDLName.Focus();
+            }
+        }
+
+        private void dtp_MouseDown(object sender, MouseEventArgs e)
+        {
+            //btnComplete_Click(this, EventArgs.Empty);
+            
+        }
+
+        private void dtp_ValueChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(dtp.Value.ToString());
+        }
+    }
 }

@@ -29,6 +29,7 @@ namespace CMPG223_18
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayments));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@ namespace CMPG223_18
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtDancerLName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbSearchPay = new System.Windows.Forms.ComboBox();
+            this.ttAdd = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +94,7 @@ namespace CMPG223_18
             this.txtPay.Name = "txtPay";
             this.txtPay.Size = new System.Drawing.Size(135, 20);
             this.txtPay.TabIndex = 22;
+            this.txtPay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPay_KeyDown);
             // 
             // lblFName
             // 
@@ -112,6 +114,7 @@ namespace CMPG223_18
             this.txtDancerFName.Size = new System.Drawing.Size(135, 20);
             this.txtDancerFName.TabIndex = 15;
             this.txtDancerFName.TextChanged += new System.EventHandler(this.txtDancerFName_TextChanged);
+            this.txtDancerFName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDancerFName_KeyDown);
             // 
             // dtpDatePaid
             // 
@@ -120,6 +123,7 @@ namespace CMPG223_18
             this.dtpDatePaid.Name = "dtpDatePaid";
             this.dtpDatePaid.Size = new System.Drawing.Size(135, 20);
             this.dtpDatePaid.TabIndex = 16;
+            this.dtpDatePaid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtpDatePaid_MouseDown);
             // 
             // lblDatePaid
             // 
@@ -150,6 +154,7 @@ namespace CMPG223_18
             this.txtPayable.Name = "txtPayable";
             this.txtPayable.Size = new System.Drawing.Size(135, 20);
             this.txtPayable.TabIndex = 20;
+            this.txtPayable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPayable_KeyDown);
             // 
             // lblPayable
             // 
@@ -172,6 +177,7 @@ namespace CMPG223_18
             this.btnAdd.Size = new System.Drawing.Size(137, 32);
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
+            this.ttAdd.SetToolTip(this.btnAdd, "Click here to save the payment details");
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -194,14 +200,9 @@ namespace CMPG223_18
             this.label1.TabIndex = 24;
             this.label1.Text = "Dancer Last Name";
             // 
-            // cmbSearchPay
+            // ttAdd
             // 
-            this.cmbSearchPay.FormattingEnabled = true;
-            this.cmbSearchPay.Location = new System.Drawing.Point(893, 104);
-            this.cmbSearchPay.Name = "cmbSearchPay";
-            this.cmbSearchPay.Size = new System.Drawing.Size(121, 21);
-            this.cmbSearchPay.TabIndex = 26;
-            this.cmbSearchPay.SelectedIndexChanged += new System.EventHandler(this.cmbSearchPay_SelectedIndexChanged);
+            this.ttAdd.Tag = "Click here when you are done filling in all the information";
             // 
             // frmPayments
             // 
@@ -209,7 +210,6 @@ namespace CMPG223_18
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1001, 406);
-            this.Controls.Add(this.cmbSearchPay);
             this.Controls.Add(this.txtDancerLName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
@@ -250,6 +250,6 @@ namespace CMPG223_18
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtDancerLName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbSearchPay;
+        private System.Windows.Forms.ToolTip ttAdd;
     }
 }
