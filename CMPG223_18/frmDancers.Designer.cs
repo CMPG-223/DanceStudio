@@ -29,13 +29,11 @@ namespace CMPG223_18
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDancers));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.pnlSearch = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtDancerID = new System.Windows.Forms.TextBox();
             this.lblDancerID = new System.Windows.Forms.Label();
             this.lblFName = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.Label();
@@ -47,10 +45,10 @@ namespace CMPG223_18
             this.dgvDancers = new System.Windows.Forms.DataGridView();
             this.lblDataGrid = new System.Windows.Forms.Label();
             this.btnComplete = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pnlSearch.SuspendLayout();
+            this.txtDFName = new System.Windows.Forms.TextBox();
+            this.txtDLName = new System.Windows.Forms.TextBox();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
+            this.ttComplete = new System.Windows.Forms.ToolTip(this.components);
             this.grpExpLvl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDancers)).BeginInit();
             this.SuspendLayout();
@@ -60,221 +58,212 @@ namespace CMPG223_18
             this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Location = new System.Drawing.Point(8, 8);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(36, 36);
+            this.btnBack.Size = new System.Drawing.Size(24, 23);
             this.btnBack.TabIndex = 5;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogOut.BackColor = System.Drawing.Color.OldLace;
             this.btnLogOut.Font = new System.Drawing.Font("Modern No. 20", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(809, 651);
+            this.btnLogOut.Location = new System.Drawing.Point(539, 423);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(84, 31);
+            this.btnLogOut.Size = new System.Drawing.Size(56, 20);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // pnlSearch
+            // txtDancerID
             // 
-            this.pnlSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlSearch.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlSearch.Controls.Add(this.textBox2);
-            this.pnlSearch.Controls.Add(this.textBox1);
-            this.pnlSearch.Controls.Add(this.lblSearch);
-            this.pnlSearch.Controls.Add(this.lblDancerID);
-            this.pnlSearch.Location = new System.Drawing.Point(60, 309);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(250, 154);
-            this.pnlSearch.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(31, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 26);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(31, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(27, 17);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(60, 20);
-            this.lblSearch.TabIndex = 0;
-            this.lblSearch.Text = "Search";
+            this.txtDancerID.Location = new System.Drawing.Point(40, 281);
+            this.txtDancerID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDancerID.Name = "txtDancerID";
+            this.txtDancerID.Size = new System.Drawing.Size(127, 20);
+            this.txtDancerID.TabIndex = 14;
+            this.txtDancerID.TextChanged += new System.EventHandler(this.txtDancerID_TextChanged);
+            this.txtDancerID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDancerID_KeyDown);
+            this.txtDancerID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDancerID_KeyUp);
             // 
             // lblDancerID
             // 
-            this.lblDancerID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDancerID.AutoSize = true;
-            this.lblDancerID.Location = new System.Drawing.Point(27, 85);
+            this.lblDancerID.Location = new System.Drawing.Point(37, 266);
+            this.lblDancerID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDancerID.Name = "lblDancerID";
-            this.lblDancerID.Size = new System.Drawing.Size(82, 20);
+            this.lblDancerID.Size = new System.Drawing.Size(56, 13);
             this.lblDancerID.TabIndex = 13;
             this.lblDancerID.Text = "Dancer ID";
             // 
             // lblFName
             // 
-            this.lblFName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFName.AutoSize = true;
-            this.lblFName.Location = new System.Drawing.Point(56, 491);
+            this.lblFName.Location = new System.Drawing.Point(37, 319);
+            this.lblFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFName.Name = "lblFName";
-            this.lblFName.Size = new System.Drawing.Size(86, 20);
+            this.lblFName.Size = new System.Drawing.Size(57, 13);
             this.lblFName.TabIndex = 14;
             this.lblFName.Text = "First Name";
             // 
             // dtpDOB
             // 
-            this.dtpDOB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpDOB.AutoSize = true;
-            this.dtpDOB.Location = new System.Drawing.Point(56, 635);
+            this.dtpDOB.Location = new System.Drawing.Point(37, 413);
+            this.dtpDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(97, 20);
+            this.dtpDOB.Size = new System.Drawing.Size(65, 13);
             this.dtpDOB.TabIndex = 15;
             this.dtpDOB.Text = "Date of birth";
             // 
             // lblLName
             // 
-            this.lblLName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLName.AutoSize = true;
-            this.lblLName.Location = new System.Drawing.Point(56, 563);
+            this.lblLName.Location = new System.Drawing.Point(37, 366);
+            this.lblLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLName.Name = "lblLName";
-            this.lblLName.Size = new System.Drawing.Size(86, 20);
+            this.lblLName.Size = new System.Drawing.Size(58, 13);
             this.lblLName.TabIndex = 16;
             this.lblLName.Text = "Last Name";
             // 
             // grpExpLvl
             // 
-            this.grpExpLvl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.grpExpLvl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.grpExpLvl.Controls.Add(this.rdbDelete);
             this.grpExpLvl.Controls.Add(this.rdbUpdate);
             this.grpExpLvl.Controls.Add(this.rdbAdd);
-            this.grpExpLvl.Location = new System.Drawing.Point(60, 69);
+            this.grpExpLvl.Location = new System.Drawing.Point(40, 45);
+            this.grpExpLvl.Margin = new System.Windows.Forms.Padding(2);
             this.grpExpLvl.Name = "grpExpLvl";
-            this.grpExpLvl.Size = new System.Drawing.Size(250, 213);
+            this.grpExpLvl.Padding = new System.Windows.Forms.Padding(2);
+            this.grpExpLvl.Size = new System.Drawing.Size(167, 133);
             this.grpExpLvl.TabIndex = 17;
             this.grpExpLvl.TabStop = false;
             this.grpExpLvl.Text = "Select Action";
             // 
             // rdbDelete
             // 
-            this.rdbDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbDelete.AutoSize = true;
-            this.rdbDelete.Location = new System.Drawing.Point(21, 143);
+            this.rdbDelete.Location = new System.Drawing.Point(14, 93);
+            this.rdbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.rdbDelete.Name = "rdbDelete";
-            this.rdbDelete.Size = new System.Drawing.Size(137, 24);
+            this.rdbDelete.Size = new System.Drawing.Size(94, 17);
             this.rdbDelete.TabIndex = 2;
             this.rdbDelete.TabStop = true;
             this.rdbDelete.Text = "Delete Dancer";
             this.rdbDelete.UseVisualStyleBackColor = true;
+            this.rdbDelete.CheckedChanged += new System.EventHandler(this.rdbAdd_CheckedChanged);
             // 
             // rdbUpdate
             // 
-            this.rdbUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbUpdate.AutoSize = true;
-            this.rdbUpdate.Location = new System.Drawing.Point(21, 99);
+            this.rdbUpdate.Location = new System.Drawing.Point(14, 64);
+            this.rdbUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.rdbUpdate.Name = "rdbUpdate";
-            this.rdbUpdate.Size = new System.Drawing.Size(143, 24);
+            this.rdbUpdate.Size = new System.Drawing.Size(98, 17);
             this.rdbUpdate.TabIndex = 1;
             this.rdbUpdate.TabStop = true;
             this.rdbUpdate.Text = "Update Dancer";
             this.rdbUpdate.UseVisualStyleBackColor = true;
+            this.rdbUpdate.CheckedChanged += new System.EventHandler(this.rdbAdd_CheckedChanged);
             // 
             // rdbAdd
             // 
-            this.rdbAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbAdd.AutoSize = true;
-            this.rdbAdd.Location = new System.Drawing.Point(21, 55);
+            this.rdbAdd.Location = new System.Drawing.Point(14, 36);
+            this.rdbAdd.Margin = new System.Windows.Forms.Padding(2);
             this.rdbAdd.Name = "rdbAdd";
-            this.rdbAdd.Size = new System.Drawing.Size(119, 24);
+            this.rdbAdd.Size = new System.Drawing.Size(82, 17);
             this.rdbAdd.TabIndex = 0;
             this.rdbAdd.TabStop = true;
             this.rdbAdd.Text = "Add Dancer";
             this.rdbAdd.UseVisualStyleBackColor = true;
+            this.rdbAdd.CheckedChanged += new System.EventHandler(this.rdbAdd_CheckedChanged);
             // 
             // dgvDancers
             // 
-            this.dgvDancers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDancers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvDancers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDancers.Location = new System.Drawing.Point(411, 99);
+            this.dgvDancers.Location = new System.Drawing.Point(274, 64);
+            this.dgvDancers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDancers.Name = "dgvDancers";
             this.dgvDancers.RowHeadersWidth = 62;
             this.dgvDancers.RowTemplate.Height = 28;
-            this.dgvDancers.Size = new System.Drawing.Size(342, 511);
+            this.dgvDancers.Size = new System.Drawing.Size(557, 237);
             this.dgvDancers.TabIndex = 18;
             // 
             // lblDataGrid
             // 
-            this.lblDataGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDataGrid.AutoSize = true;
-            this.lblDataGrid.Location = new System.Drawing.Point(407, 69);
+            this.lblDataGrid.Location = new System.Drawing.Point(271, 45);
+            this.lblDataGrid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDataGrid.Name = "lblDataGrid";
-            this.lblDataGrid.Size = new System.Drawing.Size(69, 20);
+            this.lblDataGrid.Size = new System.Drawing.Size(47, 13);
             this.lblDataGrid.TabIndex = 19;
             this.lblDataGrid.Text = "Dancers";
             // 
             // btnComplete
             // 
-            this.btnComplete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnComplete.BackColor = System.Drawing.Color.OldLace;
             this.btnComplete.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplete.Location = new System.Drawing.Point(547, 633);
+            this.btnComplete.Location = new System.Drawing.Point(319, 353);
+            this.btnComplete.Margin = new System.Windows.Forms.Padding(2);
             this.btnComplete.Name = "btnComplete";
-            this.btnComplete.Size = new System.Drawing.Size(206, 49);
+            this.btnComplete.Size = new System.Drawing.Size(137, 32);
             this.btnComplete.TabIndex = 20;
             this.btnComplete.Text = "Complete";
+            this.ttComplete.SetToolTip(this.btnComplete, "Click here to save the data that was entered");
             this.btnComplete.UseVisualStyleBackColor = false;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
-            // textBox3
+            // txtDFName
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(60, 514);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 26);
-            this.textBox3.TabIndex = 22;
+            this.txtDFName.Location = new System.Drawing.Point(40, 334);
+            this.txtDFName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDFName.Name = "txtDFName";
+            this.txtDFName.Size = new System.Drawing.Size(127, 20);
+            this.txtDFName.TabIndex = 22;
+            this.txtDFName.TextChanged += new System.EventHandler(this.txtDFName_TextChanged);
+            this.txtDFName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDFName_KeyDown);
             // 
-            // textBox4
+            // txtDLName
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Location = new System.Drawing.Point(60, 586);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 26);
-            this.textBox4.TabIndex = 23;
+            this.txtDLName.Location = new System.Drawing.Point(40, 381);
+            this.txtDLName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDLName.Name = "txtDLName";
+            this.txtDLName.Size = new System.Drawing.Size(127, 20);
+            this.txtDLName.TabIndex = 23;
+            this.txtDLName.TextChanged += new System.EventHandler(this.txtDLName_TextChanged);
             // 
-            // dateTimePicker1
+            // dtp
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.Location = new System.Drawing.Point(60, 658);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 26);
-            this.dateTimePicker1.TabIndex = 24;
+            this.dtp.Location = new System.Drawing.Point(40, 428);
+            this.dtp.Margin = new System.Windows.Forms.Padding(2);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(127, 20);
+            this.dtp.TabIndex = 24;
+            this.dtp.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
+            this.dtp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtp_MouseDown);
+            // 
+            // ttComplete
+            // 
+            this.ttComplete.Tag = "Click here when want save data that was entered";
             // 
             // frmDancers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(905, 694);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(901, 490);
+            this.Controls.Add(this.txtDancerID);
+            this.Controls.Add(this.dtp);
+            this.Controls.Add(this.txtDLName);
+            this.Controls.Add(this.txtDFName);
+            this.Controls.Add(this.lblDancerID);
             this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.lblDataGrid);
             this.Controls.Add(this.dgvDancers);
@@ -282,13 +271,12 @@ namespace CMPG223_18
             this.Controls.Add(this.lblLName);
             this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.lblFName);
-            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnBack);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDancers";
             this.Text = "Dancers";
-            this.pnlSearch.ResumeLayout(false);
-            this.pnlSearch.PerformLayout();
+            this.Load += new System.EventHandler(this.frmDancers_Load);
             this.grpExpLvl.ResumeLayout(false);
             this.grpExpLvl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDancers)).EndInit();
@@ -301,9 +289,6 @@ namespace CMPG223_18
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblDancerID;
         private System.Windows.Forms.Label lblFName;
         private System.Windows.Forms.Label dtpDOB;
@@ -314,10 +299,11 @@ namespace CMPG223_18
         private System.Windows.Forms.RadioButton rdbAdd;
         private System.Windows.Forms.DataGridView dgvDancers;
         private System.Windows.Forms.Label lblDataGrid;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDancerID;
         private System.Windows.Forms.Button btnComplete;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtDFName;
+        private System.Windows.Forms.TextBox txtDLName;
+        private System.Windows.Forms.DateTimePicker dtp;
+        private System.Windows.Forms.ToolTip ttComplete;
     }
 }
